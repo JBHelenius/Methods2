@@ -91,6 +91,8 @@ set.seed(2002) # setting a seed (in the best year ever??) - this way, even thoug
 my_simulated_data <- rnorm(100, 50, 5)
 df <- as.data.frame(my_simulated_data)
 ggplot(df, aes(x=my_simulated_data)) + geom_histogram()
+sd(my_simulated_data)
+mean(my_simulated_data)
 ```
 
 ## Ex. 0.c) Talk with your group and note in 1-2 sentences: What do we know of the data drawn from the rnorm()? 
@@ -106,6 +108,12 @@ Sketching a regression model and data: Figure 1.1b shows data corresponding to t
 
 #### Ex. 1.2.a) Sketch hypothetical data with the same range of x but corresponding to the line y = 30 + 10x with residual standard deviation 3.9.
 * If you're not sure how to approach this exercise, try and go by the piecemeal hint-intruction in the bottom of this doc :)
+```{r}
+intercept<-30
+slope<-10
+seq(stats::rnorm(, sd=3.9))
+?seq
+```
 
 #### Ex. 1.2.b) Sketch hypothetical data with the same range of x but corresponding to the line y = 30 + 10x with residual standard deviation 10.
 
